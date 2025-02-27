@@ -1,19 +1,19 @@
-class Covariant[+T](val items: T)
+class Covariant[+T](val datas: T)
 
 class Bird {
     def speak(): String = {
-        "bird is speaking"
+        "bird is flying"
     }
 }
 
 class Parrot extends Bird {
     override def speak(): String = {
-        "parrot is speaking"
+        "parrot is flying"
     }
 }
 
 class Contravariant[-T] {
-    def addItem(item: T): Unit = {
-        println(s"item added: $item")
+    def adddata(data: T): Unit = {
+        println(s"data added: $data")
     }
 }

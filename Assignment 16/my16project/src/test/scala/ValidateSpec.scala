@@ -4,7 +4,7 @@ import org.scalatest.matchers.should.Matchers
 class EnumValidationTests extends AnyFunSuite with Matchers {
 
   // Task 1
-  test("Check if all days exist in the enumeration") {
+  test("Check if all days exist in the enum") {
     val allDays = Seq(
       Day.Monday, Day.Tuesday, Day.Wednesday, 
       Day.Thursday, Day.Friday, Day.Saturday, Day.Sunday

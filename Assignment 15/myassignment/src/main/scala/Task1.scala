@@ -1,11 +1,11 @@
 class Container[T]{
-    private var items: List[T]=List()
+    private var datas: List[T]=List()
 
-    def addItem(item:T):Unit={
-        items=items:+item
+    def adddata(data:T):Unit={
+        datas=datas:+data
     }
 
-   def getItems:List[T]={
-     items
+   def getdata:List[T]={
+     datas
    } 
 }

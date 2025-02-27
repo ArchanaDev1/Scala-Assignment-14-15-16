@@ -3,22 +3,23 @@ import org.scalatest.matchers.should.Matchers
 
 class TaskSpec extends AnyFlatSpec with Matchers {
 
-  "Covariant" should "allow subtypes" in {
+  "Covariant" should "subtypes" in {
     val bird: Covariant[Bird] = new Covariant[Parrot](new Parrot)
-    bird.items.speak() should be ("parrot is speaking")
+    bird.datas.speak() should be ("parrot is flying")
   }
 
-  "Contravariant" should "allow supertypes" in {
+
+  "Contravariant" should "supertypes" in {
     val contravariant: Contravariant[Parrot] = new Contravariant[Bird]
-    contravariant.addItem(new Parrot) 
+    contravariant.adddata(new Parrot) 
   }
 
-  "makeBirdSpeak" should "accept subtypes of Bird" in {
+  "makeBirdFly" should "subtypes of Bird" in {
     val parrot = new Parrot
-    makeBirdSpeak(parrot) 
+    makeBirdFly(parrot) 
   }
 
-  "handleBird" should "accept supertypes of Parrot" in {
+  "handleBird" should "supertypes of Parrot" in {
     val bird: Bird = new Parrot
     handleBird(bird) 
   }

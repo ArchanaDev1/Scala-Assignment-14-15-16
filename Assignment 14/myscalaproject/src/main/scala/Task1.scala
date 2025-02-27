@@ -18,7 +18,7 @@ object Relationships {
         val mapVal: Any = Map("key" -> "value")
     }
    
-    def safeCast[T: ClassTag](value: Any): Option[T] = value match {
+    def scast[T: ClassTag](value: Any): Option[T] = value match {
         case v: T => Some(v)
         case _ => None
     }

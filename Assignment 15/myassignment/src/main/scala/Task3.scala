@@ -1,4 +1,4 @@
-def makeBirdSpeak[A <: Bird](bird: A): Unit = {
+def makeBirdFly[A <: Bird](bird: A): Unit = {
   bird.speak()
 }
 
